@@ -7,4 +7,16 @@
 	{
 		echo "Yes SQL";
 	}
+	
+	$mysqli = new mysqli('192.168.1.13', 'gameuser', '' , 'test');
+	
+	if(!$mysqli)
+	{
+		die '連線失敗';
+	}
+	else
+	{
+		echo "連線成功";
+	}
+	
 ?>
