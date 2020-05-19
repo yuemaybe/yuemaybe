@@ -10,7 +10,7 @@
 <nav class="yoyoman">
 <a href="index.html" rel="yoyoman">關於本人</a> 
 <a href="Portfolio.html" rel="yoyoman">關於作品</a> 
-<a href="game.html" rel="yoyoman">小遊戲啦</a> 
+<a href="game.php" rel="yoyoman">小遊戲啦</a> 
 </nav>
 
 <div class="wiki-inner">
