@@ -8,8 +8,6 @@
 		echo "Yes SQL";
 	}
 	
-	$mysqli = new mysqli('192.168.1.13', 'gameuser', '', 'game');
-	
 
 	
 ?>
