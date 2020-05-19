@@ -24,7 +24,8 @@
 		echo "<form align='center' action='google.php'><button>登入</button></form>";
 	}else
 	{
-		echo "yes";
+		echo "<p align='center'>登入成功！</p>";
+		echo "<form align='center' action='https://hiimyg.herokuapp.com/glogout.php?'><button>登出</button></form>";
 	}
 
 
