@@ -17,6 +17,11 @@
 
 <?php
 	session_start();
+	require_once 'vendor/autoload.php';
+	$client = new Google_Client();
+	$client -> setAuthConfig('client_secret.json');
+	$client -> addScope('https://www.googleapis.com/auth/userinfo.email');
+	$client -> addScope('https://www.googleapis.com/auth/userinfo.profile');
 
 	if(!isset($_SESSION['access_token']))
 	{
@@ -24,7 +29,15 @@
 		echo "<form align='center' action='google.php'><button>登入</button></form>";
 	}else
 	{
+		$client -> setAccessToken($_SESSION['access_token']);
+		$service = new Google_Service_Oauth2($client);
+		$user_info = $service -> userinfo -> get();
+		$open_id = $user_info -> id;
+		$email = $user_info -> email;
+		$name = $user_info -> name;
+		
 		echo "<p align='center'>登入成功！</p>";
+		echo "<p align='center'>歡迎" . $name . "玩家登入！</p>";
 		echo "<form align='center' action='https://hiimyg.herokuapp.com/glogout.php?'><button>登出</button></form>";
 	}
 
