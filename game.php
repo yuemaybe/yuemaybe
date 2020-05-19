@@ -18,11 +18,9 @@
 <?php
 	session_start();
 	require_once 'vendor/autoload.php';
-	$client = new Google_Client();
-	$client -> setAuthConfig('client_secret.json');
-	$client -> addScope('https://www.googleapis.com/auth/userinfo.email');
-	$client -> addScope('https://www.googleapis.com/auth/userinfo.profile');
-
+	require_once 'gclient.php';
+	
+	
 	if(!isset($_SESSION['access_token']))
 	{
 		echo "<p align='center'>請先登入（Google）</p>";
