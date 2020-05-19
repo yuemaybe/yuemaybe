@@ -23,8 +23,7 @@ if(isset($_SESSION['access_token']) && $_SESSION['access_token'])
 	$email = $user_info -> email;
 	$name = $user_info -> name;
 	
-	echo $open_id,$name,$email;
-	echo "<form action='https://hiimyg.herokuapp.com/glogout.php?'><button>登出</button></form>";
+	header('Location: https://hiimyg.herokuapp.com/game.php?');
 }
 else
 {
