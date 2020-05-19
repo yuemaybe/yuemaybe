@@ -1,5 +1,5 @@
 <?php
-	if(!extension_loaded('mysqli'))
+	if(!extension_loaded('mysqli') && !function_exists('mysqli_init'))
 	{
 		echo "No SQL";
 	}
