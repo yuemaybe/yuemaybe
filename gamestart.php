@@ -12,7 +12,7 @@
 	
 	if(!$mysqli)
 	{
-		echo "fail";
+		die;
 	}
 	else
 	{
