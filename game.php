@@ -19,7 +19,6 @@
 	session_start();
 	require_once 'vendor/autoload.php';
 	require_once 'gclient.php';
-	include 'SQLconnect.php';
 	
 	
 	if(!isset($_SESSION['access_token']))
