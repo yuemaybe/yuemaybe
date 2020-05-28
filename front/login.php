@@ -26,6 +26,9 @@
 				echo "<h1 align='center'>請先登入</h1>";
 				echo "<form align='center' action='../google/google2.php'><button>Google登入</button></form>";
 				echo "<form align='center' action='../facebook/FBlogin.php'><button>FaceBook登入</button></form>";
+
+				echo "<h1 align='center'>請先登入（Google）</h1>";
+				echo "<form align='center' action='google2.php'><button>登入</button></form>";
 			}
 
 			else
