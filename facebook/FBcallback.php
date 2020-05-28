@@ -49,8 +49,8 @@
 	}
 
 	//登入後
-	echo '<h3>AccessToken</h3>';
-	var_dump($accessToken -> getValue());
+	// echo '<h3>AccessToken</h3>';
+	// var_dump($accessToken -> getValue());
 
 	//OAuth2.0會幫忙管理token
 	$oauth = $fb -> getOAuth2Client();
@@ -80,6 +80,6 @@
 	}
 
 	$_SESSION['fb_access_token'] = $accessToken;
-	header('Location: https://hiimyg.herokuapp.com/facebook/FBtest.php?');
+	// header('Location: https://hiimyg.herokuapp.com/facebook/FBtest.php?');
 
 ?>
