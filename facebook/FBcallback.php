@@ -65,21 +65,21 @@
 
 	// if(!$access -> isLongLived())
 	// {
-		// try
-		// {
-		// 	$accessToken = $oauth -> getLongLivedAccessToken($accessToken);
-		// }
-		// catch(Facebook\Exception\SDKException $e)
-		// {
-		// 	echo '<p>Error getting long-lived access token: ' . $e -> getMessage() . '</p>\n\n';
-		// 	exit;
-		// }
+	// 	try
+	// 	{
+	// 		$accessToken = $oauth -> getLongLivedAccessToken($accessToken);
+	// 	}
+	// 	catch(Facebook\Exception\SDKException $e)
+	// 	{
+	// 		echo '<p>Error getting long-lived access token: ' . $e -> getMessage() . '</p>\n\n';
+	// 		exit;
+	// 	}
 
-		// echo '<h3>Long-lived</h3>';
-		// var_dump($accessToken -> getValue());
+	// 	echo '<h3>Long-lived</h3>';
+	// 	var_dump($accessToken -> getValue());
 	// }
 
-	// $_SESSION['fb_access_token'] = (string)$accessToken;
-	// header('Location:https://hiimyg.herokuapp.com/facebook/FBtest.php?');
+	$_SESSION['fb_access_token'] = (string)$accessToken;
+	header('Location:https://hiimyg.herokuapp.com/facebook/FBtest.php?');
 
 ?>
