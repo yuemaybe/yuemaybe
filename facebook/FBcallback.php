@@ -66,6 +66,7 @@
 	catch(Execption $e)
 	{
 		echo '錯了' . $e -> getMessage();
+		exit;
 	}
 	// $tokenMetadata -> validateExpiration();
 
