@@ -12,7 +12,7 @@
 	$helper = $fb -> getRedirectLoginHelper();
 
 	try{
-		$accessToken = $helper -> getAccessToken();
+		$accessToken = $helper -> getAccessToken('https://hiimyg.herokuapp.com/facebook/FBcallback.php?');
 	}
 	catch(Facebook\Exception\ResponseException $e)
 	{
