@@ -19,7 +19,6 @@
 		<?php
 			session_start();
 			require_once '../vendor/autoload.php';
-			require_once '../google/gclient.php';
 			
 			if(!isset($_SESSION['access_token']) && !isset($_SESSION['fb_access_token']))
 			{
