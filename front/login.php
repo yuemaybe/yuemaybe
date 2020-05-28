@@ -30,6 +30,7 @@
 				echo "<form align='center' action='../google/google2.php'><button>Google登入</button></form>";
 				echo "<form align='center' action=' . $loginUrl . '><button>FaceBook登入</button></form>";
 				echo '<a href = "' . $loginUrl . '"> 以FB方式登入 </a>';
+				echo $loginUrl;
 			}
 
 			else
