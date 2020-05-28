@@ -4,7 +4,7 @@
 
 		<meta charset="UTF-8">
 		<title>HiImYG</title>
-		<link rel="stylesheet" href="../front/CSS.css">
+		<link rel="stylesheet" href="CSS.css">
 
 	</head>
 	<body bgcolor="#ECFFFF"> 
