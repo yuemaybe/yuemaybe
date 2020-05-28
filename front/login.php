@@ -19,13 +19,16 @@
 		<?php
 			session_start();
 			require_once '../vendor/autoload.php';
+			require_once '../facebook/FBclient.php';
+			$helper = $fb -> getRedirectLoginHelper();
+			$permissions = ['email'];
+			$loginUrl = $helper -> getLoginUrl('https://hiimyg.herokuapp.com/facebook/FBcallback.php?', $permissions);
 			
 			if(!isset($_SESSION['access_token']) && !isset($_SESSION['fb_access_token']))
 			{
 				echo "<h1 align='center'>請先登入</h1>";
 				echo "<form align='center' action='../google/google2.php'><button>Google登入</button></form>";
-				echo "<form align='center' action='../facebook/FBlogin.php'><button>FaceBook登入</button></form>";
-
+				echo "<form align='center' action=' . $loginUrl . '><button>FaceBook登入</button></form>";
 			}
 
 			else
@@ -49,13 +52,6 @@
 				}
 				elseif(isset($_SESSION['fb_access_token']))
 				{
-					$fb = new Facebook\Facebook(
-						[
-							'app_id' => '599570660765510',
-							'app_secret' => 'f33b813f2a800fe6a0d4996360167df1',
-							'default_graph_version' => 'v3.1',
-						]
-					);
 					
 					try{
 						$response = $fb -> get('/me?field=id,name' , $_SESSION['fb_access_token']);
