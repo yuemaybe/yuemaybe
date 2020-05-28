@@ -1,6 +1,7 @@
 <?php
 
 	require_once '../vendor/autoload.php';
+
 	$fb = new Facebook\Facebook(
 		[
 			'app_id' => '599570660765510',
@@ -11,7 +12,7 @@
 
 	$helper = $fb -> getRedirectLoginHelper();
 	$permissions = ['email'];
-	$loginUrl = $helper -> getLoginUrl('FBcallback.php', $permissions);
+	$loginUrl = $helper -> getLoginUrl('https://hiimyg.herokuapp.com/facebook/FBcallback.php?', $permissions);
 
 	echo '<a href = "' . $loginUrl . '"> 以FB方式登入 </a>';
 
