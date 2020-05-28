@@ -61,7 +61,7 @@
 	// var_dump($tokenMetadata);
 
 	// $tokenMetadata -> validateAppId($config['599570660765510']);
-	// $tokenMetadata -> validateExpiration();
+	 $tokenMetadata -> validateExpiration();
 
 	// if(!$access -> isLongLived())
 	// {
