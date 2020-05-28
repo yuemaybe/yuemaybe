@@ -11,19 +11,17 @@
 	);
 	$helper = $fb -> getRedirectLoginHelper();
 
-	try{
-		$accessToken = $helper -> getAccessToken();
-	}
-	catch(Facebook\Exception\ResponseException $e)
-	{
-		echo 'Graph 報錯 ' . $e -> getMessage();
+	try {
+		$accessToken = $helper->getAccessToken();
+	  } catch(Facebook\Exception\ResponseException $e) {
+		// When Graph returns an error
+		echo 'Graph returned an error: ' . $e->getMessage();
 		exit;
-	}
-	catch(Facebook\Exception\SDKException $e)
-	{
-		echo 'Facebook SDK 報錯 ' . $e -> getMessage();
+	  } catch(Facebook\Exception\SDKException $e) {
+		// When validation fails or other local issues
+		echo 'Facebook SDK returned an error: ' . $e->getMessage();
 		exit;
-	}
+	  }
 
 	// if(!isset($accessToken))
 	// {
