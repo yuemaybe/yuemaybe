@@ -19,8 +19,9 @@
 		<?php
 			session_start();
 			require_once '../vendor/autoload.php';
+			require_once '../google/gclient.php';
 			
-			if(!isset($_SESSION['access_token']))
+			if(!isset($_SESSION['access_token']) && !isset($_SESSION['fb_access_token']))
 			{
 				echo "<h1 align='center'>請先登入</h1>";
 				echo "<form align='center' action='../google/google2.php'><button>Google登入</button></form>";
@@ -33,7 +34,7 @@
 				if(isset($_SESSION['access_token']))
 				{
 					$client = new Google_Client();
-					$client -> setAuthConfig('client_secret.json');
+					$client -> setAuthConfig('../google/client_secret.json');
 					$client -> addScope('https://www.googleapis.com/auth/userinfo.email');
 					$client -> addScope('https://www.googleapis.com/auth/userinfo.profile');
 
@@ -78,7 +79,7 @@
 					echo "<p align='center'>歡迎 " . $user['name'] . " 登入！</p>";
 					echo "<form align='center' action='https://hiimyg.herokuapp.com/facebook/FBlogout.php?'><button>登出</button></form>";
 				}
-
+				
 			}
 		?>
 
