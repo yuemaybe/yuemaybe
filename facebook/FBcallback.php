@@ -11,19 +11,19 @@
 	);
 	$helper = $fb -> getRedirectLoginHelper();
 
-	// try{
-	// 	$accessToken = $helper -> getAccessToken();
-	// }
-	// catch(Facebook\Exception\ResponseException $e)
-	// {
-	// 	echo 'Graph 報錯 ' . $e -> getMessage();
-	// 	exit;
-	// }
-	// catch(Facebook\Exception\SDKException $e)
-	// {
-	// 	echo 'Facebook SDK 報錯 ' . $e -> getMessage();
-	// 	exit;
-	// }
+	try{
+		$accessToken = $helper -> getAccessToken();
+	}
+	catch(Facebook\Exception\ResponseException $e)
+	{
+		echo 'Graph 報錯 ' . $e -> getMessage();
+		exit;
+	}
+	catch(Facebook\Exception\SDKException $e)
+	{
+		echo 'Facebook SDK 報錯 ' . $e -> getMessage();
+		exit;
+	}
 
 	// if(!isset($accessToken))
 	// {
