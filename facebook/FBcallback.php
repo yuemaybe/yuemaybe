@@ -11,37 +11,37 @@
 	);
 	$helper = $fb -> getRedirectLoginHelper();
 
-	try{
-		$accessToken = $helper -> getAccessToken();
-	}
-	catch(Facebook\Exception\ResponseException $e)
-	{
-		echo 'Graph 報錯 ' . $e -> getMessage();
-		exit;
-	}
-	catch(Facebook\Exception\SDKException $e)
-	{
-		echo 'Facebook SDK 報錯 ' . $e -> getMessage();
-		exit;
-	}
+	// try{
+	// 	$accessToken = $helper -> getAccessToken();
+	// }
+	// catch(Facebook\Exception\ResponseException $e)
+	// {
+	// 	echo 'Graph 報錯 ' . $e -> getMessage();
+	// 	exit;
+	// }
+	// catch(Facebook\Exception\SDKException $e)
+	// {
+	// 	echo 'Facebook SDK 報錯 ' . $e -> getMessage();
+	// 	exit;
+	// }
 
-	if(!isset($accessToken))
-	{
-		if($helper -> getError())
-		{
-			header('HTTP/1.0 401 Unauthorized');
-			echo 'Error: '	. $helper -> getError() . "\n";
-			echo 'ErrorCode: '	. $helper -> getErrorCode() . "\n";
-			echo 'Error Reason: '	. $helper -> getErrorReason() . "\n";
-			echo 'Error Description: '	. $helper -> getErrorDescription() . "\n";
-		}
-		else
-		{
-			header('HTTP/1.0 400 Bad Request');
-			echo 'Bad Request';
-		}
-		exit;
-	}
+	// if(!isset($accessToken))
+	// {
+	// 	if($helper -> getError())
+	// 	{
+	// 		header('HTTP/1.0 401 Unauthorized');
+	// 		echo 'Error: '	. $helper -> getError() . "\n";
+	// 		echo 'ErrorCode: '	. $helper -> getErrorCode() . "\n";
+	// 		echo 'Error Reason: '	. $helper -> getErrorReason() . "\n";
+	// 		echo 'Error Description: '	. $helper -> getErrorDescription() . "\n";
+	// 	}
+	// 	else
+	// 	{
+	// 		header('HTTP/1.0 400 Bad Request');
+	// 		echo 'Bad Request';
+	// 	}
+	// 	exit;
+	// }
 
 	// //登入後
 	// echo '<h3>AccessToken</h3>';
