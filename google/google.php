@@ -15,6 +15,8 @@
 
 <div class="wiki-inner">
 
+<h1 align='center'>請先登入</h1>
+
 <?php
 	session_start();
 	require_once '../vendor/autoload.php';
