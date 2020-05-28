@@ -21,23 +21,7 @@
 			require_once '../vendor/autoload.php';
 			require_once '../google/gclient.php';
 			
-			if(!isset($_SESSION['access_token']))
-			{
-				echo "<h1 align='center'>請先登入（Google）</h1>";
-				echo "<form align='center' action='google2.php'><button>登入</button></form>";
-			}
-
-			else
-			{
-				$client -> setAccessToken($_SESSION['access_token']);
-				$service = new Google_Service_Oauth2($client);
-				$user_info = $service -> userinfo -> get();
-				$name = $user_info -> name;
-				
-				echo "<p align='center'>登入成功！</p>";
-				echo "<p align='center'>歡迎 " . $name . " 玩家登入！</p>";
-				echo "<form align='center' action='https://hiimyg.herokuapp.com/google/glogout.php?'><button>登出</button></form>";
-			}
+			echo 'wtf?';
 		?>
 
 	</div>
