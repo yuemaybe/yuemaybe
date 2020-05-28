@@ -11,7 +11,7 @@
 		<nav class="yoyoman">
 		<a href="../index.html" rel="yoyoman">關於本人</a> 
 		<a href="../front/Portfolio.html" rel="yoyoman">關於作品</a> 
-		<a href="google.php" rel="yoyoman">小遊戲啦</a> 
+		<a href="google.php" rel="yoyoman">測試登入</a> 
 	</nav>
 
 	<div class="wiki-inner">
@@ -28,7 +28,7 @@
 				echo "<p align='center'>請先登入（Google）</p>";
 				echo "<form align='center' action='google2.php'><button>登入</button></form>";
 			}
-			
+
 			else
 			{
 				$client -> setAccessToken($_SESSION['access_token']);
