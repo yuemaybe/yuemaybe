@@ -63,8 +63,8 @@
 	 $tokenMetadata -> validateAppId('599570660765510');
 	 $tokenMetadata -> validateExpiration();
 
-	if(!$access -> isLongLived())
-	{
+	// if(!$access -> isLongLived())
+	// {
 		// try
 		// {
 		// 	$accessToken = $oauth -> getLongLivedAccessToken($accessToken);
@@ -77,7 +77,7 @@
 
 		// echo '<h3>Long-lived</h3>';
 		// var_dump($accessToken -> getValue());
-	}
+	// }
 
 	// $_SESSION['fb_access_token'] = (string)$accessToken;
 	// header('Location:https://hiimyg.herokuapp.com/facebook/FBtest.php?');
