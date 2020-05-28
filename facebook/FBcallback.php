@@ -80,6 +80,6 @@
 	}
 
 	$_SESSION['fb_access_token'] = (string)$accessToken;
-	header('Location : https://hiimyg.herokuapp.com/facebook/FBtest.php?')
+	header('Location: https://hiimyg.herokuapp.com/facebook/FBtest.php?');
 
 ?>
