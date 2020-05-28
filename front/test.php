@@ -19,6 +19,7 @@
 			<?php
 				session_start();
 				require_once '../vendor/autoload.php';
+				require_once '../google/gclient.php';
 				
 				echo "<h1 align='center'>請先登入（Google）</h1>";
 				echo "<form align='center' action='google2.php'><button>登入</button></form>";
