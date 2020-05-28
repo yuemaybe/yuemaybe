@@ -58,10 +58,10 @@
 	// //從debug_token取得metadata
 	$tokenMetadata = $oauth -> debugToken($accessToken);
 	// echo '<h3>Metadata</h3>';
-	 var_dump($tokenMetadata);
+	// var_dump($tokenMetadata);
 
-	 $tokenMetadata -> validateAppId($config['599570660765510']);
-	 $tokenMetadata -> validateExpiration();
+	 $tokenMetadata -> validateAppId('599570660765510');
+	//  $tokenMetadata -> validateExpiration();
 
 	// if(!$access -> isLongLived())
 	// {
