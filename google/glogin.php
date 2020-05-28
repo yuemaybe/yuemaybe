@@ -1,6 +1,7 @@
 <?php
 
 require_once '../vendor/autoload.php';
+require_once 'gclient.php';
 session_start();
 
 $client = new Google_Client();
