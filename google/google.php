@@ -17,14 +17,14 @@
 
 <?php
 	session_start();
-	require_once 'vendor/autoload.php';
+	require_once '../vendor/autoload.php';
 	require_once 'gclient.php';
 	
 	
 	if(!isset($_SESSION['access_token']))
 	{
 		echo "<p align='center'>請先登入（Google）</p>";
-		echo "<form align='center' action='google.php'><button>登入</button></form>";
+		echo "<form align='center' action='google2.php'><button>登入</button></form>";
 	}else
 	{
 		$client -> setAccessToken($_SESSION['access_token']);
@@ -36,7 +36,6 @@
 		
 		echo "<p align='center'>登入成功！</p>";
 		echo "<p align='center'>歡迎 " . $name . " 玩家登入！</p>";
-		echo "<form align='center' action='https://hiimyg.herokuapp.com/gamestart.php?'><button>進入遊戲</button></form>";
 		echo "<form align='center' action='https://hiimyg.herokuapp.com/glogout.php?'><button>登出</button></form>";
 	}
 

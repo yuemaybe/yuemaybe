@@ -23,11 +23,11 @@ if(isset($_SESSION['access_token']) && $_SESSION['access_token'])
 	$email = $user_info -> email;
 	$name = $user_info -> name;
 	
-	header('Location: https://hiimyg.herokuapp.com/game.php?');
+	header('Location: https://hiimyg.herokuapp.com/google/google.php?');
 }
 else
 {
-	header('Location: https://hiimyg.herokuapp.com/glogin.php?');
+	header('Location: https://hiimyg.herokuapp.com/google/glogin.php?');
 }
 
 ?>
