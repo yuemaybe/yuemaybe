@@ -24,6 +24,11 @@
 		echo 'Facebook SDK 報錯 ' . $e -> getMessage();
 		exit;
 	}
+	catch(Exception $e)
+	{
+		echo '發生錯誤' . $e -> getMessage();
+		exit;
+	}
 
 	// if(!isset($accessToken))
 	// {
