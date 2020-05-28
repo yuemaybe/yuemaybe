@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	require_once '../vendor/autoload.php';
+	
 	$fb = new Facebook\Facebook(
 		[
 			'app_id' => '599570660765510',
@@ -74,6 +75,6 @@
 	}
 
 	$_SESSION['fb_access_token'] = (string)$accessToken;
-	header('Location : https://hiimyg.herokuapp.com/facebook/FBtest.php?')
+	//header('Location : https://hiimyg.herokuapp.com/facebook/FBtest.php?')
 
 ?>
