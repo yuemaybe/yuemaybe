@@ -25,6 +25,6 @@
 	}
 
 	$user = $response -> getGraphUser();
-	echo 'hello ' . $user['name'];
+	echo 'hello ' . $user['name'] . '你的ID為 ' . $user['id'];
 
 ?>
