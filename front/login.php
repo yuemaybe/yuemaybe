@@ -21,7 +21,7 @@
 			require_once '../vendor/autoload.php';
 			require_once '../google/gclient.php';
 			
-			if(!isset($_SESSION['access_token']) && !isset($_SESSION['fb_access_token'])
+			if(!isset($_SESSION['access_token']) && !isset($_SESSION['fb_access_token']))
 			{
 				echo "<h1 align='center'>請先登入</h1>";
 				echo "<form align='center' action='../google/google2.php'><button>Google登入</button></form>";
