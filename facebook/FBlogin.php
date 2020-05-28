@@ -7,6 +7,7 @@
 	$permissions = ['email'];
 	$loginUrl = $helper -> getLoginUrl('https://hiimyg.herokuapp.com/facebook/FBcallback.php?', $permissions);
 
-	echo '<a href = "' . $loginUrl . '"> 以FB方式登入 </a>';
+	// echo '<a href = "' . $loginUrl . '"> 以FB方式登入 </a>';
+	header("Location: $loginUrl");
 
 ?>
