@@ -59,15 +59,8 @@
 	$tokenMetadata = $oauth -> debugToken($accessToken);
 	// echo '<h3>Metadata</h3>';
 	// var_dump($tokenMetadata);
-	try
-	{
-		$tokenMetadata -> validateAppId($config['599570660765510']);
-	}
-	catch(Execption $e)
-	{
-		echo '錯了' . $e -> getMessage();
-		exit;
-	}
+
+	// $tokenMetadata -> validateAppId($config['599570660765510']);
 	// $tokenMetadata -> validateExpiration();
 
 	// if(!$access -> isLongLived())
