@@ -12,7 +12,7 @@
 	$helper = $fb -> getRedirectLoginHelper();
 
 	// try{
-	 	$accessToken = $helper -> getAccessToken();
+	//	$accessToken = $helper -> getAccessToken();
 	// }
 	// catch(Facebook\Exception\ResponseException $e)
 	// {
