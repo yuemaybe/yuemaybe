@@ -26,6 +26,7 @@
 			
 			if(!isset($_SESSION['access_token']) && !isset($_SESSION['fb_access_token']))
 			{
+				echo "<br>";
 				echo "<form align='center' action='../google/google2.php'><button>Google登入</button></form>";
 				echo "<br>";
 				echo "<form align='center' action='../facebook/FBlogin.php'><button>FaceBook登入</button></form>";
