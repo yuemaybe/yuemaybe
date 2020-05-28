@@ -56,30 +56,30 @@
 	$oauth = $fb -> getOAuth2Client();
 
 	// //從debug_token取得metadata
-	// $tokenMetadata = $oauth -> debugToken($accessToken);
+	$tokenMetadata = $oauth -> debugToken($accessToken);
 	// echo '<h3>Metadata</h3>';
 	// var_dump($tokenMetadata);
 
-	// $tokenMetadata -> validateAppId($config['599570660765510']);
-	// $tokenMetadata -> validateExpiration();
+	$tokenMetadata -> validateAppId($config['599570660765510']);
+	$tokenMetadata -> validateExpiration();
 
-	// if(!$access -> isLongLived())
-	// {
-	// 	try
-	// 	{
-	// 		$accessToken = $oauth -> getLongLivedAccessToken($accessToken);
-	// 	}
-	// 	catch(Facebook\Exception\SDKException $e)
-	// 	{
-	// 		echo '<p>Error getting long-lived access token: ' . $e -> getMessage() . '</p>\n\n';
-	// 		exit;
-	// 	}
+	if(!$access -> isLongLived())
+	{
+		try
+		{
+			$accessToken = $oauth -> getLongLivedAccessToken($accessToken);
+		}
+		catch(Facebook\Exception\SDKException $e)
+		{
+			echo '<p>Error getting long-lived access token: ' . $e -> getMessage() . '</p>\n\n';
+			exit;
+		}
 
-	// 	echo '<h3>Long-lived</h3>';
-	// 	var_dump($accessToken -> getValue());
-	// }
+		echo '<h3>Long-lived</h3>';
+		var_dump($accessToken -> getValue());
+	}
 
-	// $_SESSION['fb_access_token'] = $accessToken;
-	// // header('Location: https://hiimyg.herokuapp.com/facebook/FBtest.php?');
+	$_SESSION['fb_access_token'] = $accessToken;
+	// header('Location: https://hiimyg.herokuapp.com/facebook/FBtest.php?');
 
 ?>
