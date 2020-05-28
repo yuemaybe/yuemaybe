@@ -11,7 +11,7 @@
 	);
 	
 	try{
-		$response = $fb -> get('/me?field=id,name,email' , $_SESSION['fb_access_token']);
+		$response = $fb -> get('/me?field=id,name' , $_SESSION['fb_access_token']);
 	}
 	catch(Facebook\Exception\ResponseException $e) 
 	{
@@ -25,6 +25,6 @@
 	}
 
 	$user = $response -> getGraphUser();
-	echo 'hello ' . $user['name'] . ' 你的ID為 ' . $user['id'] . ' Email為 ' . $user['email'];
+	echo 'hello ' . $user['name'] . ' 你的ID為 ' . $user['id'];
 
 ?>
