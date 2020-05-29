@@ -47,7 +47,6 @@
 					$name = $user_info -> name;
 					
 					echo "<p align='center'>您使用的是Google登入</p>";
-					echo "<p align='center'>登入成功！</p>";
 					echo "<p align='center'>歡迎 " . $name . " 登入！</p>";
 					echo "<form align='center' action='https://hiimyg.herokuapp.com/google/glogout.php?'><button>登出</button></form>";
 				}
@@ -71,7 +70,6 @@
 					$user = $response -> getGraphUser();
 					
 					echo "<p align='center'>您使用的是FaceBook登入</p>";
-					echo "<p align='center'>登入成功！</p>";
 					echo "<p align='center'>歡迎 " . $user['name'] . " 登入！</p>";
 					echo "<form align='center' action='https://hiimyg.herokuapp.com/facebook/FBlogout.php?'><button>登出</button></form>";
 				}
