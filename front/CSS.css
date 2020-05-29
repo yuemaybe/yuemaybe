@@ -60,7 +60,9 @@ a:hover
 	line-height:1.6; /*行距*/
 	margin:12px auto;
 	max-width:600px;
-	width:90%
+	width:90%;
+	font-size:18;
+	font-family:DFKai-sb;
 }
 
 .wiki-inner img,.wiki-inner picture

@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="CSS.css">
 
 	</head>
-	<body bgcolor="#ECFFFF"> 
+	<body bgcolor="#ECF5FF"> 
 		<nav class="yoyoman">
 		<a href="../index.html" rel="yoyoman">關於本人</a> 
 		<a href="Portfolio.html" rel="yoyoman">關於作品</a> 
