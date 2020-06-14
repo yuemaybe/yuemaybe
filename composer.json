@@ -1,7 +1,0 @@
-{
-    "require": {
-        "monolog/monolog": "^2.0",
-        "google/apiclient": "^2.4",
-        "facebook/graph-sdk": "^5.7"
-    }
-}
